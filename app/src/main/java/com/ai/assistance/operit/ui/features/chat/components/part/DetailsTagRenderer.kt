@@ -67,6 +67,9 @@ object DetailsTagRenderer {
                             text = body,
                             textColor = textColor.copy(alpha = 0.85f),
                             modifier = Modifier,
+                            // 只作用于 details 折叠块内部：正文降一档，跟随主题，
+                            // 全局字号与其他层级不受影响。
+                            fontSize = MaterialTheme.typography.bodySmall.fontSize,
                             enableDialogs = enableDialogs
                         )
                     }
